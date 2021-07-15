@@ -1,0 +1,77 @@
+@mixin borderBlack {
+  border: 1.5px solid $black;
+}
+@mixin borderWhite {
+  border: 0.5px solid $white;
+}
+@mixin shadow {
+  text-shadow: 1px 2px 5px $black;
+}
+@mixin shadowWhite {
+  text-shadow: 1px 2px 5px $white;
+}
+
+.hero {
+  margin-top: 3em;
+  .intro {
+    @include shadowWhite();
+    font-size: 5em;
+  }
+  .name {
+    @include shadowWhite();
+    margin-top: -0.1em;
+  }
+  .sosmed a {
+    color: $black;
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+.skill {
+  .btn {
+    @include borderWhite();
+    background-color: $black;
+    color: $white;
+
+    &:hover {
+      @include borderBlack();
+      background-color: $white;
+      color: $black;
+      font-weight: 800;
+      transition: 0.5s;
+    }
+  }
+  .btn-dark {
+    @include borderBlack();
+    background-color: $gray;
+    color: $black;
+    &:hover {
+      @include borderWhite();
+      background-color: $black;
+      color: $white;
+      font-weight: 800;
+      transition: 0.5s;
+    }
+  }
+}
+.discipline,
+.learn,
+.strong {
+  @include shadow();
+}
+.discipline {
+  position: absolute;
+  font-size: 70px;
+  margin-left: 3.5em;
+  margin-top: -1em;
+}
+.learn {
+  margin-top: 0.2em;
+  font-size: 150px;
+}
+.strong {
+  margin-top: 2em;
+  font-size: 50px;
+  margin-left: 5.3em;
+}

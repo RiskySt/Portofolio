@@ -1,0 +1,17 @@
+// ============ IMPORT SASS ===========
+@import './section/navbar';
+@import './section/header';
+@import './section/section';
+@import './variables/components';
+
+// ============ IMPORT GOOGLE FONT ===========
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Poppins:ital@0;1&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: $background;
+  font-family: $font-primary;
+}
